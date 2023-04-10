@@ -6,13 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project One</title>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
 <body>
-    <h1>Date Night</h1>
-    <h2>Drinks</h2>
-    <!-- IMG-Button, button src img -->
+    <h1>Brewvely</h1>
+    <h2>Your Seattle brewery date randomizer</h2>
+    <!-- Trigger/Open the Modal -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Start</a>
+    <!-- The Modal -->
+    <div id="modalForm" class="modal"></div>
+    <!-- Modal content -->
+        <div class="modal-content">
+            <h4>Beer Form</h4>
+            <div class="input-field">
+                <input type="text" id="beer-preference">
+                <label for="beer-preference">Beer Preference</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="Hoppiness">
+                <label for="Hoppiness">Hoppiness</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="ABV">
+                <label for="ABV">ABV</label>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
+              </div>
+        </div>
     <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
