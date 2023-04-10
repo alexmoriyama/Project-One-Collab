@@ -4,6 +4,7 @@ jokeAPIurl =
 var mainRandBrew = document.getElementById("brewery-container1");
 var randBrewButton = document.getElementById("randomize-button");
 var randJokeButton = document.getElementById("randomize-joke");
+var randJokeEl = document.getElementById("random-jokes-container");
 
 function getJokeApi() {
   fetch(jokeAPIurl)
@@ -11,7 +12,39 @@ function getJokeApi() {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
+      // console.log(data);
+      var jokes = data;
+      var randomJokes = [];
+      console.log(randomJokes);
+
+      for (var i = 0; i < 1; i++) {
+        var j = Math.floor(Math.random() * data.length);
+        var temp = jokes.results;
+        randomJokes.push(temp);
+        console.log(randomJokes);
+      }
+
+      randJokeEl.innerHTML = " ";
+
+      for (var i = 0; i < randomJokes.length; i++) {
+        //create jokes h3 elements
+        var question = document.createElement("h3");
+        var jokesQuestion = document.createElement("p");
+        var answer = document.createElement("h3");
+        var jokesAnswer = document.createElement("p");
+
+        //adds randomized jokes context
+        question.textContent = "Question:";
+        jokesQuestion.textContent = randomJokes[0][i].question;
+        answer.textContent = "Answer:";
+        jokesAnswer.textContent = randomJokes[0][i].correct_answer;
+
+        //appends randomized jokes content to the page
+        randJokeEl.append(question);
+        randJokeEl.append(jokesQuestion);
+        randJokeEl.append(answer);
+        randJokeEl.append(jokesAnswer);
+      }
     });
 }
 // getJokeApi();
@@ -24,7 +57,7 @@ function getBeerApi() {
       return response.json();
     })
     .then(function (data) {
-      // console.log(data);
+      console.log(data);
       var breweries = data;
       var randomBrewery = [];
 
@@ -32,6 +65,7 @@ function getBeerApi() {
       for (var i = 0; i < 3; i++) {
         var j = Math.floor(Math.random() * data.length);
         var temp = breweries[j];
+        console.log("temp brew" + temp);
         randomBrewery.push(temp);
         console.log(randomBrewery);
       }
