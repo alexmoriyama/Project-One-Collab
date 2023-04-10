@@ -47,6 +47,18 @@
     font-weight: bolder;
     margin-top: 300px !important;
   }
+
+  .button {
+    background-color: var(--button-color);
+    color: var(--text-color-2);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 36px;
+    font-weight: bolder;
+    margin-top: 300px !important;
+  }
   
   button:hover {
     background-color: var(--accent-color-2);
