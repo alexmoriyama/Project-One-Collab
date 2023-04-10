@@ -66,5 +66,10 @@ function getBeerApi() {
 }
 // getBeerApi();
 
-randBrewButton.addEventListener("click", getBeerApi);
-randJokeButton.addEventListener("click", getJokeApi);
+// randBrewButton.addEventListener("click", getBeerApi);
+// randJokeButton.addEventListener("click", getJokeApi);
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.modal');
+  var instances = M.Modal.init(elems);
+});

@@ -11,35 +11,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Atma:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Start</a>
 
-<body>
-    <h1>Brewvely</h1>
-    <h2>Your Seattle brewery date randomizer</h2>
-    <!-- Trigger/Open the Modal -->
-    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Start</a>
-    <!-- The Modal -->
-    <div id="modalForm" class="modal"></div>
-    <!-- Modal content -->
-        <div class="modal-content">
-            <h4>Beer Form</h4>
-            <div class="input-field">
-                <input type="text" id="beer-preference">
-                <label for="beer-preference">Beer Preference</label>
-            </div>
-            <div class="input-field">
-                <input type="text" id="Hoppiness">
-                <label for="Hoppiness">Hoppiness</label>
-            </div>
-            <div class="input-field">
-                <input type="text" id="ABV">
-                <label for="ABV">ABV</label>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
-              </div>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content center">
+      <h4>Beer Form</h4>
+      <div class ="modal-content">
+        <div class="input-field">
+            <h5>Beer Preference</h5>
+            <input type="text" id="beer-preference">
         </div>
+        <div class="input-field">
+            <h5>Hoppiness</h5>
+            <input type="text" id="beer-preference">
+        </div>
+        <div class="input-field">
+            <h5>ABV</h5>
+            <input type="text" id="beer-preference">
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">submit</a>
+    </div>
+  </div>
+
+
     <script src="./script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 
 </html>
