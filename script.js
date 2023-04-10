@@ -1,5 +1,5 @@
 jokeAPIurl =
-  "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple";
+  "https://the-trivia-api.com/api/questions?categories=general_knowledge&limit=30&region=US&difficulty=medium";
 
 var mainRandBrew = document.getElementById("brewery-container1");
 var randBrewButton = document.getElementById("randomize-button");
@@ -12,14 +12,14 @@ function getJokeApi() {
       return response.json();
     })
     .then(function (data) {
-      // console.log(data);
+      console.log(data);
       var jokes = data;
       var randomJokes = [];
       console.log(randomJokes);
 
       for (var i = 0; i < 1; i++) {
         var j = Math.floor(Math.random() * data.length);
-        var temp = jokes.results;
+        var temp = jokes[j];
         randomJokes.push(temp);
         console.log(randomJokes);
       }
@@ -35,9 +35,9 @@ function getJokeApi() {
 
         //adds randomized jokes context
         question.textContent = "Question:";
-        jokesQuestion.textContent = randomJokes[0][i].question;
+        jokesQuestion.textContent = randomJokes[i].question;
         answer.textContent = "Answer:";
-        jokesAnswer.textContent = randomJokes[0][i].correct_answer;
+        jokesAnswer.textContent = randomJokes[i].correctAnswer;
 
         //appends randomized jokes content to the page
         randJokeEl.append(question);
