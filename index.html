@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Atma:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
+
+<body>
+
   <!-- Modal Trigger -->
   <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Start</a>
 
@@ -19,17 +22,19 @@
     <div class="modal-content center">
       <h4>Beer Form</h4>
       <div class ="modal-content">
-        <div class="input-field">
-            <h5>Beer Preference</h5>
-            <input type="text" id="beer-preference">
-        </div>
+        <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Beer Preference</a>
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">light beer</a></li>
+            <li><a href="#!">medium beer</a></li>
+            <li><a href="#!">dark beer</a></li>
+          </ul>
         <div class="input-field">
             <h5>Hoppiness</h5>
-            <input type="text" id="beer-preference">
+            <input type="text" id="hoppiness">
         </div>
         <div class="input-field">
             <h5>ABV</h5>
-            <input type="text" id="beer-preference">
+            <input type="text" id="abv">
         </div>
       </div>
     </div>
