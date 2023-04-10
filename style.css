@@ -9,9 +9,13 @@
   }
   
   body {
-    background-image: url("./assets/pics/index-bg\ \(w_out\ btn\).png");
+    background-image: url("./assets/pics/index-bg-no-btn.png");
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    font-family: 'Atma', cursive;
+
   }
   
   button {
