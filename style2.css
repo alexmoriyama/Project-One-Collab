@@ -1,0 +1,122 @@
+:root {
+    --text-color: #f9c041;
+    --button-color: #b91646;
+    --accent-color: #33679a;
+    --text-color-2: #eeece9;
+    --accent-color-2: #105652;
+    --bg-color-dk-grey: #231f20;
+    --bg-color-secondary-lt-grey: #5d5950;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+    font-family: "Atma" !important;
+  }
+  
+  body,
+  main,
+  footer {
+    background-image: url("./assets/pics/bg-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: "Atma", cursive;
+  }
+  
+  button {
+    background-color: var(--button-color);
+    color: var(--text-color-2);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 36px;
+    font-weight: bolder;
+    align-items: center;
+  }
+  
+  #button-section {
+    text-align: center;
+  }
+  #randomize-joke {
+    text-align: center;
+  }
+  .button {
+    background-color: var(--button-color);
+    color: var(--text-color-2);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 36px;
+    font-weight: bolder;
+    margin-top: 300px !important;
+  }
+  
+  button:hover {
+    background-color: var(--accent-color-2);
+  }
+  
+  #form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  a {
+    color: var(--accent-color);
+  }
+  
+  a:hover {
+    color: var(--accent-color-2);
+  }
+  
+  #brewery-container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: larger;
+  }
+  
+  #random-jokes-container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: larger;
+  }
+  
+  #brewery-container1,
+  #brewery-container2,
+  #brewery-container3 {
+    background-color: var(--bg-color-secondary-lt-grey);
+    padding: 10px;
+    margin: 15px;
+  }
+  
+  h1 {
+    font-size: 8rem !important;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  h2 {
+    font-size: medium !important;
+    padding: 15px;
+    margin: 0% !important;
+  }
+  
+  p {
+    /* line-height: 1.5; */
+    /* margin-bottom: 10px; */
+    font-size: medium !important;
+  }
+  
