@@ -1,0 +1,54 @@
+:root {
+    --text-color: #F9C041;
+    --button-color: #B91646;
+    --accent-color: #33679A;
+    --text-color-2: #EEECE9;
+    --accent-color-2: #105652;
+    --bg-color-dk-grey: #231F20;
+    --bg-color-secondary-lt-grey: #5D5950;
+  }
+  
+  body {
+    background-image: url("./assets/pics/index-bg\ \(w_out\ btn\).png");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  button {
+    background-color: var(--button-color);
+    color: var(--text-color-2);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: var(--accent-color);
+  }
+  
+  a {
+    color: var(--accent-color);
+  }
+  
+  a:hover {
+    color: var(--accent-color-2);
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  
