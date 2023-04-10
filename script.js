@@ -5,6 +5,7 @@ var mainRandBrew = document.getElementById("brewery-container1");
 var randBrewButton = document.getElementById("randomize-button");
 var randJokeButton = document.getElementById("randomize-joke");
 var randJokeEl = document.getElementById("random-jokes-container");
+var beerPreference = document.getElementById("dropdown1");
 
 function getJokeApi() {
   fetch(jokeAPIurl)
@@ -47,7 +48,7 @@ function getJokeApi() {
       }
     });
 }
-// getJokeApi();
+getJokeApi();
 
 BeerAPIurl = "https://api.openbrewerydb.org/v1/breweries/search?query=seattle";
 
@@ -61,7 +62,6 @@ function getBeerApi() {
       var breweries = data;
       var randomBrewery = [];
 
-      // for (var i = 0; i < data.length; i++) {
       for (var i = 0; i < 3; i++) {
         var j = Math.floor(Math.random() * data.length);
         var temp = breweries[j];
@@ -98,17 +98,19 @@ function getBeerApi() {
       }
     });
 }
-// getBeerApi();
+getBeerApi();
 
-// randBrewButton.addEventListener("click", getBeerApi);
-// randJokeButton.addEventListener("click", getJokeApi);
+randBrewButton.addEventListener("click", getBeerApi);
+randJokeButton.addEventListener("click", getJokeApi);
+//TODO: get submit button and get them added to this in order to create filters
+beerPreference.addEventListener("click");
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.modal');
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".modal");
   var instances = M.Modal.init(elems);
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.dropdown-trigger');
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".dropdown-trigger");
   var instances = M.Dropdown.init(elems);
 });
