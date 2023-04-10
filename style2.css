@@ -37,6 +37,12 @@
     font-weight: bolder;
     align-items: center;
   }
+
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
   
   #button-section {
     text-align: center;
