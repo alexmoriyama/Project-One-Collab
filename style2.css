@@ -83,6 +83,7 @@
   
   #brewery-container {
     display: flex;
+    flex: wrap;
     margin: 0 auto;
     flex-direction: row;
     align-items: center;
@@ -101,9 +102,9 @@
     font-size: larger;
   }
   
+  #brewery-container0,
   #brewery-container1,
-  #brewery-container2,
-  #brewery-container3 {
+  #brewery-container2 {
     background-color: var(--bg-color-secondary-lt-grey);
     padding: 10px;
     margin: 15px;
