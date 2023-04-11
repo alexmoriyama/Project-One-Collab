@@ -16,17 +16,3 @@ beerPreferenceItem.forEach(item => {item.addEventListener('click', event=>{
     beerButton.textContent = event.target.textContent;});
     
 });
-
-var hoppinessBtn = document.querySelector('.dropdown-trigger-2');
-var hoppinessBtnItem = document.querySelectorAll('#dropdown2');
-hoppinessBtnItem.forEach(item => {item.addEventListener('click', event=>{
-    hoppnessBtn.textContent = event.target.textContent;});
-    
-});
-
-var abvBtn = document.querySelector('.dropdown-trigger-3');
-var abvPreferenceItem = document.querySelectorAll('#dropdown3');
-abvPreferenceItem.forEach(item => {item.addEventListener('click', event=>{
-    abvBtn.textContent = event.target.textContent;});
-    
-});
