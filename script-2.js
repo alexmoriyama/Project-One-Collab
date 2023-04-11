@@ -25,15 +25,15 @@ function getJokeApi() {
         console.log(randomJokes);
       }
 
-      // randJokeEl.innerHTML = " ";
+      randJokeEl.innerHTML = " ";
 
       for (var i = 0; i < randomJokes.length; i++) {
         //create jokes h3 elements
 
         var question = document.createElement("h3");
-        var jokesQuestion = document.createElement("p");
+        var jokesQuestion = document.createElement("h2");
         var answer = document.createElement("h3");
-        var jokesAnswer = document.createElement("p");
+        var jokesAnswer = document.createElement("h2");
 
         //adds randomized jokes context
         question.textContent = "Question:";
@@ -80,7 +80,7 @@ function getBeerApi() {
         console.log(randImg);
       }
 
-      // mainRandBrew.innerHTML = " ";
+      mainRandBrew.innerHTML = " ";
 
       for (var i = 0; i < randomBrewery.length; i++) {
         var container = document.createElement("section");
