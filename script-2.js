@@ -1,7 +1,7 @@
 jokeAPIurl =
   "https://the-trivia-api.com/api/questions?categories=general_knowledge&limit=30&region=US&difficulty=medium";
 
-var mainRandBrew = document.getElementById("brewery-container1");
+var mainRandBrew = document.getElementById("brewery-container");
 var randBrewButton = document.getElementById("randomize-button");
 var randJokeButton = document.getElementById("randomize-joke");
 var randJokeEl = document.getElementById("random-jokes-container");
@@ -25,10 +25,11 @@ function getJokeApi() {
         console.log(randomJokes);
       }
 
-      randJokeEl.innerHTML = " ";
+      // randJokeEl.innerHTML = " ";
 
       for (var i = 0; i < randomJokes.length; i++) {
         //create jokes h3 elements
+
         var question = document.createElement("h3");
         var jokesQuestion = document.createElement("p");
         var answer = document.createElement("h3");
@@ -71,9 +72,22 @@ function getBeerApi() {
       }
       //Creating a h3 element and a p element
 
-      mainRandBrew.innerHTML = " ";
+      var randImg = [];
+
+      for (var i = 0; i < 3; i++) {
+        var j = Math.floor(Math.random() * 15);
+        randImg.push(j);
+        console.log(randImg);
+      }
+
+      // mainRandBrew.innerHTML = " ";
 
       for (var i = 0; i < randomBrewery.length; i++) {
+        var container = document.createElement("section");
+        container.setAttribute("id", "brewery-container" + [i]);
+        mainRandBrew.append(container);
+
+        var image = document.createElement("img");
         var breweryName = document.createElement("h3");
         var breweryLink = document.createElement("p");
         var breweryAddress = document.createElement("p");
@@ -88,11 +102,18 @@ function getBeerApi() {
         breweryAddress.textContent = randomBrewery[i].street;
         breweryNum.textContent = randomBrewery[i].phone;
 
+        image.setAttribute(
+          "src",
+          "assets/pics/brewer-pics/" + randImg[i] + ".jpg"
+        );
+
         //Appending the dynamically generated html to the div associated with the id="users"
-        mainRandBrew.append(breweryName);
-        mainRandBrew.append(breweryLink);
-        mainRandBrew.append(breweryAddress);
-        mainRandBrew.append(breweryNum);
+
+        container.append(image);
+        container.append(breweryName);
+        container.append(breweryLink);
+        container.append(breweryAddress);
+        container.append(breweryNum);
 
         //Append will attach the element as the bottom most child.
       }
@@ -103,4 +124,4 @@ getBeerApi();
 randBrewButton.addEventListener("click", getBeerApi);
 randJokeButton.addEventListener("click", getJokeApi);
 //TODO: get submit button and get them added to this in order to create filters
-beerPreference.addEventListener("click");
+// beerPreference.addEventListener("click");
