@@ -39,7 +39,7 @@
   }
 
   img {
-    width: 300px;
+    width: 100%;
     height: 300px;
     object-fit: cover;
   }
@@ -49,6 +49,7 @@
   }
   #randomize-joke {
     text-align: center;
+    margin-bottom: 30px !important;
   }
   .button {
     background-color: var(--button-color);
@@ -83,6 +84,7 @@
   
   #brewery-container {
     display: flex;
+    flex: wrap;
     margin: 0 auto;
     flex-direction: row;
     align-items: center;
@@ -93,20 +95,23 @@
   
   #random-jokes-container {
     display: flex;
-    margin: 0 auto;
-    flex-direction: row;
+    margin: 0% !important;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
     font-size: larger;
   }
   
+  #brewery-container0,
   #brewery-container1,
-  #brewery-container2,
-  #brewery-container3 {
+  #brewery-container2 {
     background-color: var(--bg-color-secondary-lt-grey);
     padding: 10px;
     margin: 15px;
+    width: 30%;
+    height: 100%;
+    border-radius: 15px;
   }
   
   h1 {
@@ -116,7 +121,14 @@
   }
   h2 {
     font-size: medium !important;
-    padding: 15px;
+    padding-bottom: 15px;
+    margin: 0% !important;
+  }
+
+  h3 {
+    font-size: xx-large !important;
+    text-align: center;
+    padding-bottom: 15px;
     margin: 0% !important;
   }
   
