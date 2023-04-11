@@ -1,3 +1,5 @@
+var modalSelection = document.getElementById("dropdown1");
+
 // This is the event listener for the modal 
 document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll(".modal");
@@ -16,3 +18,13 @@ beerPreferenceItem.forEach(item => {item.addEventListener('click', event=>{
     beerButton.textContent = event.target.textContent;});
     
 });
+
+function storeValue(event) {
+  console.log(event.target);
+  var modalValue = event.target.id;
+  localStorage.setItem("modalValue", modalValue);
+  return modalValue;
+ }
+ 
+ 
+ modalSelection.addEventListener("click", storeValue);
