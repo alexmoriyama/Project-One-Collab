@@ -8,7 +8,8 @@ var randJokeEl = document.getElementById("random-jokes-container");
 var beerPreference = document.getElementById("dropdown1");
 //actually add the modal
 // var modalResponse = document.getElementById("modal");
-var modalResponse = "large";
+var modalResponse = localStorage.getItem("modalValue");
+console.log(modalResponse);
 
 function getJokeApi() {
   fetch(jokeAPIurl)
