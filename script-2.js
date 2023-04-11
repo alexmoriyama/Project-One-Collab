@@ -6,6 +6,9 @@ var randBrewButton = document.getElementById("randomize-button");
 var randJokeButton = document.getElementById("randomize-joke");
 var randJokeEl = document.getElementById("random-jokes-container");
 var beerPreference = document.getElementById("dropdown1");
+//actually add the modal
+// var modalResponse = document.getElementById("modal");
+var modalResponse = "large";
 
 function getJokeApi() {
   fetch(jokeAPIurl)
@@ -13,16 +16,16 @@ function getJokeApi() {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
+      // console.log(data);
       var jokes = data;
       var randomJokes = [];
-      console.log(randomJokes);
+      // console.log(randomJokes);
 
       for (var i = 0; i < 1; i++) {
         var j = Math.floor(Math.random() * data.length);
         var temp = jokes[j];
         randomJokes.push(temp);
-        console.log(randomJokes);
+        // console.log(randomJokes);
       }
 
       randJokeEl.innerHTML = " ";
@@ -61,15 +64,22 @@ function getBeerApi() {
     .then(function (data) {
       console.log(data);
       var breweries = data;
+      var filteredResponse = [];
       var randomBrewery = [];
-
-      for (var i = 0; i < 3; i++) {
-        var j = Math.floor(Math.random() * data.length);
+      // add if statment for breweries based on modal
+      console.log(breweries[0].brewery_type);
+      for (var i = 0; i < breweries.length; i++) {
+        var j = Math.floor(Math.random() * breweries.length);
         var temp = breweries[j];
-        console.log("temp brew" + temp);
         randomBrewery.push(temp);
-        console.log(randomBrewery);
       }
+
+      for (let i = 0; i < randomBrewery.length; i++) {
+        if (randomBrewery[i].brewery_type === modalResponse) {
+          filteredResponse.push(randomBrewery[i]);
+        }
+      }
+
       //Creating a h3 element and a p element
 
       var randImg = [];
@@ -77,12 +87,13 @@ function getBeerApi() {
       for (var i = 0; i < 3; i++) {
         var j = Math.floor(Math.random() * 15);
         randImg.push(j);
-        console.log(randImg);
+        // console.log(randImg);
       }
+      //TODO: Fix this: If modal response = _submission then push each brewery with a brewer_type equal to the filt into a filtered breweries array
 
       mainRandBrew.innerHTML = " ";
 
-      for (var i = 0; i < randomBrewery.length; i++) {
+      for (var i = 0; i < 3; i++) {
         var container = document.createElement("section");
         container.setAttribute("id", "brewery-container" + [i]);
         mainRandBrew.append(container);
@@ -97,10 +108,10 @@ function getBeerApi() {
 
         //Setting the text of the h3 element and p element.
 
-        breweryName.textContent = randomBrewery[i].name;
-        breweryLink.textContent = randomBrewery[i].website_url;
-        breweryAddress.textContent = randomBrewery[i].street;
-        breweryNum.textContent = randomBrewery[i].phone;
+        breweryName.textContent = filteredResponse[i].name;
+        breweryLink.textContent = "LINK: " + filteredResponse[i].website_url;
+        breweryAddress.textContent = "ADDRESS: " + filteredResponse[i].street;
+        breweryNum.textContent = "PHONE: " + filteredResponse[i].phone;
 
         image.setAttribute(
           "src",
