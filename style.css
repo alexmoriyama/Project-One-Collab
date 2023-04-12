@@ -54,7 +54,7 @@
     cursor: pointer;
     font-size: 50px !important;
     font-weight: bolder;
-    margin-top: 200px !important;
+    margin-top: 150px !important;
     line-height: 19% !important;
     position: fixed;
   }
@@ -94,3 +94,6 @@
     line-height: 1.5;
     margin-bottom: 10px;
   }
+  
+
+  
