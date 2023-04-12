@@ -97,11 +97,15 @@ function getBeerApi() {
       for (var i = 0; i < 3; i++) {
         var container = document.createElement("section");
         container.setAttribute("id", "brewery-container" + [i]);
+        container.setAttribute("class", "col s12 m6 l4");
+
         mainRandBrew.append(container);
 
         var image = document.createElement("img");
         var breweryName = document.createElement("h3");
-        var breweryLink = document.createElement("p");
+        var breweryLink = document.createElement("a");
+        breweryLink.setAttribute("href", filteredResponse[i].website_url);
+        breweryLink.setAttribute("target", "_blank");
         var breweryAddress = document.createElement("p");
         var breweryNum = document.createElement("p");
 
