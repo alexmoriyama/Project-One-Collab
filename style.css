@@ -95,6 +95,11 @@
     line-height: 1.5;
     margin-bottom: 10px;
   }
+
+  .modal {
+    width: 45%;
+    height: 45%;
+  }
   
 
   
