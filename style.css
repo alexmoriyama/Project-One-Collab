@@ -54,7 +54,7 @@
     cursor: pointer;
     font-size: 50px !important;
     font-weight: bolder;
-    margin-top: 150px !important;
+    margin-top: 300px !important;
     line-height: 19% !important;
     position: fixed;
   }
@@ -95,5 +95,17 @@
     margin-bottom: 10px;
   }
   
+  .modal {
+    height: 30% !important;
+    width: 35% !important;
+    
+  }
 
+  .modal .modal-content {
+    padding: 0px !important;
+  }
+
+  /* #switch-button {
+    padding-top: 40px !important;
+  } */
   
