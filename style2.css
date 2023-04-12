@@ -14,6 +14,11 @@
     color: var(--text-color);
     font-family: "Atma" !important;
   }
+
+  .nav-wrapper{
+    background-color: var(--accent-color);
+    padding-left: 15px;
+  }
   
   body,
   main,
@@ -42,6 +47,8 @@
     width: 100%;
     height: 300px;
     object-fit: cover;
+    border-radius: 15px;
+
   }
   
   #button-section {
@@ -95,12 +102,14 @@
   
   #random-jokes-container {
     display: flex;
-    margin: 0% !important;
+    margin: 50px !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 3px;
     font-size: larger;
+    border-radius: 135px;
+    background: var(--accent-color-2);
   }
   
   #brewery-container0,
@@ -109,9 +118,10 @@
     background-color: var(--bg-color-secondary-lt-grey);
     padding: 10px;
     margin: 15px;
-    width: 30%;
+    width: 100%;
     height: 100%;
     border-radius: 15px;
+    border: 10px solid var(--text-color);
   }
   
   h1 {
@@ -120,20 +130,31 @@
     text-align: center;
   }
   h2 {
-    font-size: medium !important;
+    font-size: large !important;
     padding-bottom: 15px;
     margin: 0% !important;
+    color: var(--text-color-2);
   }
 
-  h3 {
+ #random-jokes-container h3 {
     font-size: xx-large !important;
     text-align: center;
     padding-bottom: 15px;
     margin: 0% !important;
+    margin-top: 15px !important;
+  }
+
+ #brewery-container h3 {
+    font-size: x-large !important;
+    text-align: center;
+    padding-bottom: 15px;
+    margin: 0% !important;
+    margin-top: 15px !important;
   }
   
   p {
     /* line-height: 1.5; */
     /* margin-bottom: 10px; */
     font-size: medium !important;
+    color: var(--text-color-2);
   }
