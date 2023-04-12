@@ -121,6 +121,7 @@ li.dropdown-content li {
     min-height: 0px !important;
   }
 
+<<<<<<< HEAD
 .modal {
   height: 18% !important;
 }
@@ -139,6 +140,21 @@ li.dropdown-content li {
     background-image: url("./assets/pics/iphone.png");
     background-size: cover;
     background-position: center;
+=======
+  .modal .modal-content {
+    padding: 10px !important;
+>>>>>>> develop
   }
 }
 
+<<<<<<< HEAD
+=======
+  .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal .modal-footer .btn-flat {
+    margin: 0px 0 !important;
+    margin-top: 150px !important;
+}
+  /* #switch-button {
+    padding-top: 40px !important;
+  } */
+  
+>>>>>>> develop
