@@ -74,18 +74,18 @@ function getBeerApi() {
         var temp = breweries[j];
         randomBrewery.push(temp);
       }
-
       for (let i = 0; i < randomBrewery.length; i++) {
         if (randomBrewery[i].brewery_type === modalResponse) {
+          console.log(filteredResponse);
           filteredResponse.push(randomBrewery[i]);
         }
       }
-
+      console.log(filteredResponse);
       //Creating a h3 element and a p element
 
       var randImg = [];
 
-      for (var i = 0; i < 3; i++) {
+      for (var i = 0; i < 4; i++) {
         var j = Math.floor(Math.random() * 15);
         randImg.push(j);
         // console.log(randImg);
@@ -94,10 +94,10 @@ function getBeerApi() {
 
       mainRandBrew.innerHTML = " ";
 
-      for (var i = 0; i < 3; i++) {
-        var container = document.createElement("section");
+      for (var i = 0; i < 4; i++) {
+        var container = document.createElement("div");
         container.setAttribute("id", "brewery-container" + [i]);
-        container.setAttribute("class", "col s12 m6 l4");
+        container.setAttribute("class", "col s12 m12 l2");
 
         mainRandBrew.append(container);
 
@@ -114,7 +114,7 @@ function getBeerApi() {
         //Setting the text of the h3 element and p element.
 
         breweryName.textContent = filteredResponse[i].name;
-        breweryLink.textContent = "LINK: " + filteredResponse[i].website_url;
+        breweryLink.textContent = "WEBSITE";
         breweryAddress.textContent = "ADDRESS: " + filteredResponse[i].street;
         breweryNum.textContent = "PHONE: " + filteredResponse[i].phone;
 
