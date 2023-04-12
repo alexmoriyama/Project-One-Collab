@@ -54,7 +54,7 @@
     cursor: pointer;
     font-size: 50px !important;
     font-weight: bolder;
-    margin-top: 150px !important;
+    margin-top: 300px !important;
     line-height: 19% !important;
   }
   
@@ -92,4 +92,14 @@
   p {
     line-height: 1.5;
     margin-bottom: 10px;
+  }
+
+  .modal {
+    height: 30%; 
+    width: 30% !important;
+  }
+
+  #footer {
+    bottom: 0px !important;
+    margin-top: 60px !important;
   }
