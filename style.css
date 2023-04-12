@@ -1,111 +1,144 @@
 :root {
-    --text-color: #F9C041;
-    --button-color: #B91646;
-    --accent-color: #33679A;
-    --text-color-2: #EEECE9;
-    --accent-color-2: #105652;
-    --bg-color-dk-grey: #231F20;
-    --bg-color-secondary-lt-grey: #5D5950;
+  --text-color: #f9c041;
+  --button-color: #b91646;
+  --accent-color: #33679a;
+  --text-color-2: #eeece9;
+  --accent-color-2: #105652;
+  --bg-color-dk-grey: #231f20;
+  --bg-color-secondary-lt-grey: #5d5950;
+}
+
+* {
+  /* box-sizing: border-box; */
+  padding: 0;
+  margin: 0;
+  font-family: "Atma" !important;
+}
+
+.nav-wrapper {
+  background-color: var(--accent-color);
+  padding-left: 15px;
+}
+
+body {
+  background-image: url("./assets/pics/index-bg-no-btn.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-attachment: fixed; */
+  font-family: "Atma", cursive;
+}
+
+button {
+  background-color: var(--button-color);
+  color: var(--text-color-2);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 36px;
+  font-weight: bolder;
+  margin-top: 300px !important;
+}
+
+.button {
+  background-color: var(--button-color);
+  color: var(--text-color-2);
+  border: none;
+  border-radius: 5px;
+  padding: 30px 40px !important;
+  cursor: pointer;
+  font-size: 50px !important;
+  font-weight: bolder;
+  margin-top: 300px !important;
+  line-height: 19% !important;
+  position: fixed;
+}
+
+button:hover {
+  background-color: var(--accent-color-2);
+}
+
+#form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a {
+  color: var(--accent-color);
+}
+
+a:hover {
+  color: var(--accent-color-2);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  line-height: 0;
+  font-size: 10px;
+}
+.modal h1, .modal h2, .modal h3, .modal h4{
+    margin: 0px !important;
+}
+
+.modal {
+  height: 25% !important;
+  width: 35% !important;
+}
+
+.modal .modal-content {
+  padding: 0px !important;
+}
+
+#micro,
+#brewpub,
+#regional {
+  font-size: small !important;
+  padding-top: 1.5px !important;
+  padding-bottom: 0px !important;
+}
+li.dropdown-content li {
+  padding-bottom: 0px !important;
+}
+.dropdown-content li {
+    min-height: 0px !important;
   }
 
-  * {
-    /* box-sizing: border-box; */
-    padding: 0;
-    margin: 0;
-    font-family: 'Atma' !important;
-
-  }
-
-  .nav-wrapper{
-    background-color: var(--accent-color);
-    padding-left: 15px;
-  }
-  
+.modal {
+  height: 18% !important;
+}
+#switch-button {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  max-width: 70%;
+  margin: auto;
+}
+.dropdown-content li>a, .dropdown-content li>span{
+    font-size: x-small !important;
+}
+@media only screen and (max-width: 428px) {
   body {
-    background-image: url("./assets/pics/index-bg-no-btn.png");
+    background-image: url("./assets/pics/iphone.png");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    /* background-attachment: fixed; */
-    font-family: "Atma", cursive;
+    background-position: center;
+  }
+}
 
-  }
-
-  
-  
-  button {
-    background-color: var(--button-color);
-    color: var(--text-color-2);
-    border: none;
-    border-radius: 5px;
-    padding: 8px 20px;
-    cursor: pointer;
-    font-size: 36px;
-    font-weight: bolder;
-    margin-top: 300px !important;
-  }
-
-  .button {
-    background-color: var(--button-color);
-    color: var(--text-color-2);
-    border: none;
-    border-radius: 5px;
-    padding: 30px 40px !important;
-    cursor: pointer;
-    font-size: 50px !important;
-    font-weight: bolder;
-    margin-top: 300px !important;
-    line-height: 19% !important;
-    position: fixed;
-  }
-  
-  button:hover {
-    background-color: var(--accent-color-2);
-  }
-
-  #form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
-  }
-  
-  a {
-    color: var(--accent-color);
-  }
-  
-  a:hover {
-    color: var(--accent-color-2);
-  }
-  
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-  
-  .modal {
-    height: 30% !important;
-    width: 35% !important;
-    
-  }
-
-  .modal .modal-content {
-    padding: 0px !important;
-  }
-
-  /* #switch-button {
-    padding-top: 40px !important;
-  } */
-  
