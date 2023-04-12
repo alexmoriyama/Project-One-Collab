@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project One</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
 
-<body>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="./index.html" class="brand-logo">Home</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html"></a></li>
+          <li><a href="badges.html"></a></li>
+          <li><a href="collapsible.html"></a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <nav>
-    <div class="nav-wrapper">
-      <a href="./index.html" class="brand-logo">Home</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html"></a></li>
-        <li><a href="badges.html"></a></li>
-        <li><a href="collapsible.html"></a></li>
-      </ul>
+    <!-- Modal Trigger -->
+    <div id="form-container">
+      <a
+        class="waves-effect waves-light btn modal-trigger button"
+        href="#modal1"
+        >Start</a
+      >
     </div>
-  </nav>
-
-  <!-- Modal Trigger -->
-  <div id="form-container">
-  <a class="waves-effect waves-light btn modal-trigger button" href="#modal1">Start</a>
-  </div>
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content center">
-      <h4>Beer Form</h4>
-        <div class ="modal-content">
-          <a class='beer-preference-btn dropdown-trigger-1' id="dropdown-trigger" href='#' data-target='dropdown1'>Brewery Type</a>
-          <ul id='dropdown1' class='dropdown-content'>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content center">
+        <h4>Beer Form</h4>
+        <div class="modal-content">
+          <a
+            class="beer-preference-btn dropdown-trigger-1"
+            id="dropdown-trigger"
+            href="#"
+            data-target="dropdown1"
+            >Brewery Type</a
+          >
+          <ul id="dropdown1" class="dropdown-content">
             <li><a id="micro" href="#!" class="option">Micro</a></li>
             <li><a id="brewpub" href="#!" class="option">Brew Pub</a></li>
             <li><a id="regional" href="#!" class="option">Regional</a></li>
           </ul>
-        </div>  
+        </div>
+      </div>
+      <div class="modal-footer center">
+        <a
+          href="page-2.html"
+          class="modal-close waves-effect waves-green btn-flat"
+          >Accept and continue</a
+        >
+      </div>
     </div>
-    <div class="modal-footer center">
-      <a href="page-2.html" class="modal-close waves-effect waves-green btn-flat right" id="footer">Accept and continue</a>
-    </div>
-  </div>
-
 
     <script src="./script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-</body>
-
+  </body>
 </html>
