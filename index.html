@@ -30,28 +30,38 @@
       </div>
     </nav>
 
-  <!-- Modal Trigger -->
-  <div id="form-container">
-  <a class="waves-effect waves-light btn modal-trigger button" href="#modal1">Start</a>
-  </div>
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content center">
-      <h4>Beer Form</h4>
-        <div class ="modal-content">
-          <a class='beer-preference-btn dropdown-trigger-1' id="dropdown-trigger" href='#' data-target='dropdown1'>Brewery Type</a>
-          <ul id='dropdown1' class='dropdown-content'>
-            <li value="micro"><a href="#!" id="option">Micro</a></li>
-            <li value="brewpub"><a href="#!" id="option">Brew Pub</a></li>
-            <li value="regional"><a href="#!" id="option">Regional</a></li>
-            <li><a href="#!" id="option">Surprise me!</a></li>
+    <!-- Modal Trigger -->
+    <div id="form-container">
+      <a
+        class="waves-effect waves-light btn modal-trigger button"
+        href="#modal1"
+        >Start</a
+      >
+    </div>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content center">
+        <h4>Beer Form</h4>
+        <div class="modal-content">
+          <a
+            class="beer-preference-btn dropdown-trigger-1"
+            id="dropdown-trigger"
+            href="#"
+            data-target="dropdown1"
+            >Brewery Type</a
+          >
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!" id="micro">Micro</a></li>
+            <li><a href="#!" id="brewpub">Brew Pub</a></li>
+            <li><a href="#!" id="regional">Regional</a></li>
           </ul>
         </div>
       </div>
       <div class="modal-footer center">
         <a
-          href="page-2.html"
+          id="switch-button"
           class="modal-close waves-effect waves-green btn-flat"
+          href="./page-2.html"
           >Accept and continue</a
         >
       </div>

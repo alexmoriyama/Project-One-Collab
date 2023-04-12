@@ -97,7 +97,7 @@ function getBeerApi() {
       for (var i = 0; i < 4; i++) {
         var container = document.createElement("div");
         container.setAttribute("id", "brewery-container" + [i]);
-        container.setAttribute("class", "col s12 m12 l2");
+        container.setAttribute("class", "col s12 m12 l");
 
         mainRandBrew.append(container);
 
