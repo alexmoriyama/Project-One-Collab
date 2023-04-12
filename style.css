@@ -102,9 +102,13 @@
   }
 
   .modal .modal-content {
-    padding: 0px !important;
+    padding: 10px !important;
   }
 
+  .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal .modal-footer .btn-flat {
+    margin: 0px 0 !important;
+    margin-top: 150px !important;
+}
   /* #switch-button {
     padding-top: 40px !important;
   } */
