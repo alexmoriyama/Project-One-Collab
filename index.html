@@ -33,6 +33,7 @@
     <!-- Modal Trigger -->
     <div id="form-container">
       <a
+        id="startButton"
         class="waves-effect waves-light btn modal-trigger button"
         href="#modal1"
         >Start</a
@@ -54,13 +55,19 @@
             <li><a id="micro" href="#!" class="option">Micro</a></li>
             <li><a id="brewpub" href="#!" class="option">Brew Pub</a></li>
             <li><a id="regional" href="#!" class="option">Regional</a></li>
+            <li>
+              <a id="regional micro brewpub" href="#!" class="option"
+                >Everything</a
+              >
+            </li>
           </ul>
         </div>
       </div>
       <div class="modal-footer center">
         <a
-          href="page-2.html"
+          id="switch-button"
           class="modal-close waves-effect waves-green btn-flat"
+          href="./page-2.html"
           >Accept and continue</a
         >
       </div>
