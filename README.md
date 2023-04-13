@@ -36,6 +36,12 @@ Brewery API: [OpenBreweryDB](https://www.openbrewerydb.org/)
 
 Joke API: [The Trivia API](https://the-trivia-api.com/)
 
+Stock Images: [Unsplash](https://unsplash.com/)
+
+## Collaborator: Dexter Jules
+
+## Collaborator: Alexander Blomster-Horning
+
 ## License
 
 MIT License
